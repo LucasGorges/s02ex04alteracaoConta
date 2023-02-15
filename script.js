@@ -75,3 +75,18 @@ function clicou() {
     window.location.href = "index.html";
   });
 }
+document
+  .getElementById("form-alterar-informacoes")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const urlImagemPerfil = document.getElementById("url-imagem-perfil").value;
+
+    localStorage.setItem("nome", nome);
+    localStorage.setItem("email", email);
+    localStorage.setItem("urlImagemPerfil", urlImagemPerfil);
+
+    alert("As informações da conta foram atualizadas com sucesso.");
+  });
